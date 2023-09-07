@@ -103,6 +103,14 @@
       display: none;
     }
   }
+  
+  /* Formulario para filtrar por categoría */
+  
+#select-form {
+  display: flex;
+  margin: 5px;
+  justify-content: right;
+}
 
   /* Unidades Main */
 

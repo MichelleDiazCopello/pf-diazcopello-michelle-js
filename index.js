@@ -1,6 +1,3 @@
-const fecha = new Date()
-console.log(fecha)
-
 const productos = [
     {
         id: 1,
@@ -84,6 +81,27 @@ const unidadesAHtml = (array) => {
 }
 
 unidadesAHtml (productos);
+
+const selectorCategoria = document.querySelector("#select-category")
+
+const filtrarPorCategoria = (tipo, array) => {
+    return array.filter (element => {
+        return element.categoria && tipo === element.categoria.toLowerCase ()
+    })
+}
+
+selectorCategoria.addEventListener ("change", (e) => {
+
+    console.log (filtrarPorCategoria (e.target.value, productos))
+
+    // if ( e.target.value === "all" ) {
+    //     cards(mockdata)
+    // } else if ( e.target.value === "null" ) {
+    //     cards(filtrarGeneroPorNulo(mockdata))
+    // } else {
+    //     cards(filtrarPorGenero(e.target.value, mockdata))  
+    // }
+})
 
 const allUnidades = document.querySelectorAll(".button-card")
 
