@@ -2,7 +2,7 @@ document.querySelector("form").onsubmit = ( event ) => {
     event.preventDefault()
 }
 
-document.querySelector (".send-button").onclick = () => {
+document.querySelector ("#send-button").onclick = () => {
 
     Toastify ( {
         text: "Su consulta ha sido enviada.",
@@ -11,4 +11,4 @@ document.querySelector (".send-button").onclick = () => {
         onClick: function () {}
       } )
       .showToast ();
-  } 
+} 
